@@ -1,36 +1,29 @@
 const mongoose = require('mongoose')
 
-// Mongoose Schema
 const membersSchema = new mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: true
-    },
-    nameENG: {
+    fullName: {
       type: String,
       required: true
     },
     fatherName: {
       type: String
     },
-    motherName: {
+    email: {
       type: String
     },
-    memberId: {
-      type: Number,
-      unique: true,
-      required: true
+    phoneNumber: {
+      type: Number
     },
-    mobile: {
+    address1: {
+      type: String
+    },
+    address2: {
+      type: String
+    },
+    fundSource: {
       type: String,
       required: true
-    },
-    address: {
-      type: String
-    },
-    releaseStatus: {
-      type: Boolean
     },
     gender: {
       type: String,
