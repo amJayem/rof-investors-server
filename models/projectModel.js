@@ -2,15 +2,15 @@ const mongoose = require('mongoose')
 
 const projectSchema = new mongoose.Schema(
   {
-    'project-name': {
+    projectTitle: {
       type: String,
       required: true
     },
-    'project-amount': {
+    projectAmount: {
       type: Number,
       required: true
     },
-    'project-details': {
+    projectDetails: {
       type: String,
       required: true
     }
