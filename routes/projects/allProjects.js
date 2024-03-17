@@ -6,7 +6,7 @@ const allProjects = async (req, res) => {
     const allProject = await findQuery.sort({ _id: -1 })
     // Count all documents in the collection (without any query)
     const totalCount = await projectModel.countDocuments()
-    res.status(201).json({ totalCount, allProject })
+    res.status(200).json({ status: 200, totalCount, allProject })
   } catch (error) {
     // console.error(error)
     res.status(500).send({ message: error.message })
