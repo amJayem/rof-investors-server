@@ -7,6 +7,7 @@ const getBalance = require('./balance/getBalance')
 const newProject = require('./projects/newProject')
 const allProjects = require('./projects/allProjects')
 const membersDetails = require('./members/memberDetails')
+const updateMember = require('./members/addMember')
 
 router.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
@@ -18,7 +19,7 @@ router.use(function (req, res, next) {
 })
 
 router.route('/member/add').post(addMember)
-// router.route('/update-user').put(updateUser)
+router.route('/member/update/:id').put(updateMember)
 router.route('/all-members').get(allMembers)
 router.route('/all-members/:id').get(membersDetails)
 // router.route('/all-users-homepage').get(allUsersHomePage)

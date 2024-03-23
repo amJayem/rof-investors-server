@@ -13,7 +13,7 @@ const membersSchema = new mongoose.Schema(
       type: String
     },
     phoneNumber: {
-      type: Number
+      type: String
     },
     address1: {
       type: String
