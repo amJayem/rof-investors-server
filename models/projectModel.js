@@ -7,7 +7,7 @@ const projectSchema = new mongoose.Schema(
       required: true
     },
     projectAmount: {
-      type: Number,
+      type: String,
       required: true
     },
     projectDetails: {

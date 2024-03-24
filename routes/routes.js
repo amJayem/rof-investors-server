@@ -8,6 +8,8 @@ const newProject = require('./projects/newProject')
 const allProjects = require('./projects/allProjects')
 const membersDetails = require('./members/memberDetails')
 const updateMember = require('./members/addMember')
+const projectDetails = require('./projects/projectDetails')
+const updateProject = require('./projects/updateProject')
 
 router.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
@@ -30,5 +32,7 @@ router.route('/get-balance').get(getBalance)
 
 router.route('/project/new').post(newProject)
 router.route('/project/all').get(allProjects)
+router.route('/project/:id').get(projectDetails)
+router.route('/project/update/:id').put(updateProject)
 
 module.exports = router
