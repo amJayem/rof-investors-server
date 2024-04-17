@@ -7,7 +7,7 @@ const newProduct = async (req, res) => {
     const createdProduct = await newProduct.save()
     res
       .status(201)
-      .send({ status: 201, message: 'New product added', data: createdProduct })
+      .send({ status: 201, message: 'New product added', createdProduct })
   } catch (error) {
     console.error(error)
     res.status(500).send({ message: error.message })
