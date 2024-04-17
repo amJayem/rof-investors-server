@@ -7,7 +7,7 @@ const newProject = async (req, res) => {
     const newProject = new projectModel(data)
     const createdProject = await newProject.save()
     // console.log(result)
-    res.status(201).send({ status: 201, data: createdProject })
+    res.status(201).send({ status: 201, createdProject })
   } catch (error) {
     console.error(error)
     res.status(500).send({ message: error.message })
