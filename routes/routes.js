@@ -15,6 +15,7 @@ const allProducts = require('./products/allProducts')
 const productDetails = require('./products/productDetails')
 const updateProduct = require('./products/updateProduct')
 const deleteProduct = require('./products/deleteProduct')
+const deleteProject = require('./projects/deleteProject')
 
 router.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
@@ -38,6 +39,7 @@ router.route('/project/new').post(newProject)
 router.route('/project/all').get(allProjects)
 router.route('/project/:id').get(projectDetails)
 router.route('/project/update/:id').put(updateProject)
+router.route('/project/delete/:id').delete(deleteProject)
 
 router.route('/product/new').post(newProduct)
 router.route('/product/all').get(allProducts)
