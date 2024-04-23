@@ -7,7 +7,7 @@ const deleteProject = async (req, res) => {
     const data = await projectModel.deleteOne({ _id: id })
     res.status(200).send({
       status: 200,
-      message: 'Product Deleted!',
+      message: 'Project Deleted!',
       data
     })
   } catch (error) {
