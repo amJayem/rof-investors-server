@@ -29,8 +29,8 @@ router.use(function (req, res, next) {
 
 router.route('/member/add').post(addMember)
 router.route('/member/update/:id').put(updateMember)
-router.route('/all-members').get(allMembers)
-router.route('/all-members/:id').get(membersDetails)
+router.route('/member/all').get(allMembers)
+router.route('/member/:id').get(membersDetails)
 router.route('/member/delete/:id').delete(deleteMember)
 
 router.route('/add-balance').post(addBalance)
