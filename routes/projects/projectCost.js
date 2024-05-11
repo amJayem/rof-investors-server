@@ -4,7 +4,7 @@ const getProjectCost = async (req, res) => {
   try {
     const projectInfo = await projectModel.find()
 
-    console.log(projectInfo)
+    // console.log(projectInfo)
     // Calculate the sum of all amounts
     const totalAmountCost = projectInfo.reduce((accumulator, currentValue) => {
       return accumulator + Number(currentValue.projectAmount)
