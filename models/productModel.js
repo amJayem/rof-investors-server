@@ -10,9 +10,13 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true
     },
-    productWholesalePrice: {
+    unit: {
       type: String,
       required: true
+    },
+    productWholesalePrice: {
+      type: String
+      // required: true
     },
     productRetailPrice: {
       type: String,
